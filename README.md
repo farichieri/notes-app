@@ -42,8 +42,14 @@ The following software is required to run this application:
 7. Install the dependencies: `npm install`
 8. Start the application: `npm run start`
 
-## Usage
+## Run with Docker-compose
 
+1. Run `docker compose build`
+2. Run `docker compose up -d`
+
+## Run deployed app
+
+- Deployed app: [https://notes-app-alpha-seven.vercel.app/](https://notes-app-alpha-seven.vercel.app/)
 - Register or Login with `test@test.com` `12345678`
 - there are 3 pages in the app: `/` `/app` `/app/categories`
 - Perform CRUD operations with notes
@@ -53,4 +59,4 @@ The following software is required to run this application:
 
 ## Demo
 
-Please go to this [link](https://www.loom.com/share/41bc0b6a07794a7eabcdbd8c92d4b441) to see a video demo
+Please go to this [link](https://www.loom.com/share/d644901b5e184599a100075625dd1002) to see a video demo
