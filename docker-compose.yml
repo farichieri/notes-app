@@ -1,0 +1,55 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - postgres
+    networks:
+      - default
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    env_file:
+      - ./frontend/.env
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/.next
+
+  postgres:
+    image: postgres:16
+
+    restart: always
+    env_file:
+      - ./backend/.env
+    container_name: notes-postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+    networks:
+      - default
+
+  pgadmin:
+    image: dpage/pgadmin4
+    depends_on:
+      - postgres
+    env_file:
+      - ./backend/.env
+    ports:
+      - '80:80'
+volumes:
+  db-data:

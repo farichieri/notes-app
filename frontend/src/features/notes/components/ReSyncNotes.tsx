@@ -1,7 +1,7 @@
 'use client';
 import { IoSync } from 'react-icons/io5';
 import { useResyncNotesMutation } from '..';
-import { RoundButton, Spinner } from '@/components';
+import { RoundButton } from '@/components';
 
 interface Props {}
 

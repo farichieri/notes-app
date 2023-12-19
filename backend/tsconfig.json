@@ -21,5 +21,8 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "downlevelIteration": true
+  },
+  "watchOptions": {
+    "watchFile": "fixedPollingInterval"
   }
 }

@@ -9,6 +9,7 @@ export interface Note {
   createdAt: string;
   updatedAt: string;
   categories: Category[];
+  categoryIds: number[];
 }
 
 export interface NoteInput {

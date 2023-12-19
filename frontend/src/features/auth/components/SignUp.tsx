@@ -46,7 +46,7 @@ const SignUp: React.FC<Props> = () => {
         })
       );
       dispatch(setSignUpModalOpen(false));
-      router.replace('/app');
+      router.push('/app');
     } catch (error) {
       console.log({ error });
     }

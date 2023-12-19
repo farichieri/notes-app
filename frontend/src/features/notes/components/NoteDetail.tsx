@@ -14,7 +14,7 @@ import { getNoteCategoriesIds } from '@/utils';
 
 interface Props {
   onClose: () => void;
-  note: Note & { categoryIds: number[] };
+  note: Note;
 }
 
 const NoteDetail: React.FC<Props> = ({ onClose, note }) => {
